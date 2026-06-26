@@ -1,0 +1,60 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.cart-item {
+  display: flex;
+  gap: 24px;
+
+  @media (min-width: $bp-tablet) {
+    gap: 40px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    flex: 0 0 548px;
+  }
+
+  &__image {
+    @include image-contain;
+    flex: 0 0 160px;
+    height: 198px;
+
+    @media (min-width: $bp-tablet) {
+      flex-basis: 262px;
+      height: 324px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  &__name {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+  }
+
+  &__specs {
+    margin-top: 4px;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    margin-top: 16px;
+    font-size: $font-size-sm;
+  }
+
+  &__remove {
+    align-self: flex-start;
+    margin-top: auto;
+    border: none;
+    background: none;
+    font-size: $font-size-sm;
+    color: $color-danger;
+    cursor: pointer;
+  }
+}

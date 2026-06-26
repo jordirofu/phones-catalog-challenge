@@ -1,0 +1,22 @@
+$header-height: 80px;
+
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+$padding-mobile: 16px;
+$padding-tablet: 40px;
+$padding-desktop: 100px;
+$details-content-max-width: 1200px;
+$spacing-section: 64px; // spacing between detail-page sections
+
+$color-lines: #666; // structural separators: grid, search, specs
+$color-selector-unselected: #ccc; // selector borders/outlines (idle)
+$color-selector-selected: #000; // selector borders/outlines (selected)
+$color-text-muted: #888; // secondary gray text (brand, disabled, list states)
+$color-danger: #df0000; // destructive action text ("Remove")
+
+$font-size-xs: 10px;
+$font-size-sm: 12px; // default base
+$font-size-md: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;

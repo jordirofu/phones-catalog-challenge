@@ -1,0 +1,35 @@
+@use '../../variables' as *;
+
+.phone-grid {
+  &__list {
+    list-style: none;
+    margin-bottom: $spacing-section;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid $color-lines;
+    border-left: 1px solid $color-lines;
+
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $bp-desktop) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    li {
+      display: flex;
+      min-width: 0;
+      border-right: 1px solid $color-lines;
+      border-bottom: 1px solid $color-lines;
+    }
+  }
+
+  &__loading,
+  &__error,
+  &__empty {
+    padding: 24px 0;
+    font-size: 14px;
+    color: $color-text-muted;
+  }
+}

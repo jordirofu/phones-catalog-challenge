@@ -1,0 +1,79 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.similar-phones {
+  @include page-bleed;
+  margin-bottom: $spacing-section;
+
+  &__title {
+    @include content-inset;
+    margin-bottom: 16px;
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+  }
+
+  &__track {
+    @include content-inset;
+    display: flex;
+    overflow-x: auto;
+    list-style: none;
+    cursor: grab;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &--dragging {
+      cursor: grabbing;
+      user-select: none;
+    }
+
+    li {
+      flex: 0 0 344px;
+      min-width: 0;
+      height: 344px;
+
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
+    }
+
+    .phone-card {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $color-lines;
+    }
+
+    .phone-card__image {
+      flex: 1;
+      min-height: 0;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  &__scrollbar {
+    @include content-inset;
+    margin-top: 16px;
+  }
+
+  &__line {
+    position: relative;
+    height: 2px;
+    background-color: $color-selector-unselected;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: -1px;
+    height: 4px;
+    background-color: $color-lines;
+  }
+}

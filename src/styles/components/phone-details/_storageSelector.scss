@@ -1,0 +1,42 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.storage-selector {
+  @include selector-block;
+
+  &__label {
+    @include selector-label;
+  }
+
+  &__options {
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 48px;
+    font-size: $font-size-sm;
+    border: 1px solid $color-selector-unselected;
+    background-color: #fff;
+    cursor: pointer;
+
+    @media (min-width: $bp-desktop) {
+      height: 65px;
+      font-size: $font-size-md;
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &--selected {
+      border-color: $color-selector-selected;
+      border-width: 2px;
+      z-index: 1;
+    }
+  }
+}

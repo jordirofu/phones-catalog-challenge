@@ -1,0 +1,68 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.cart-summary {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background-color: #fff;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @media (min-width: $bp-tablet) {
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    gap: 80px;
+    padding-bottom: 56px;
+  }
+
+  &__total {
+    order: -1;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-md;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-tablet) {
+      order: 0;
+      flex-basis: auto;
+      gap: 8px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__continue {
+    @include button-base;
+    @include button-secondary;
+    flex: 1;
+    text-decoration: none;
+
+    @media (min-width: $bp-tablet) {
+      flex: 0 0 200px;
+      margin-right: auto;
+    }
+
+    @media (min-width: $bp-desktop) {
+      flex-basis: 260px;
+    }
+  }
+
+  &__pay {
+    @include button-base;
+    @include button-primary;
+    flex: 1;
+
+    @media (min-width: $bp-tablet) {
+      flex: 0 0 260px;
+    }
+  }
+}

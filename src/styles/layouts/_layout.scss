@@ -1,0 +1,18 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+header {
+  position: sticky;
+  top: 0;
+  height: $header-height;
+  z-index: 100;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include page-padding;
+}
+
+.main-content {
+  @include page-padding;
+}

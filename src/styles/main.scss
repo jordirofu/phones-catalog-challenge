@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'utilities';
+
+// Layout
+@use 'layouts/layout';
+@use 'components/layout/cartIcon';
+
+// Common
+@use 'components/common/phoneCard';
+@use 'components/common/backBar';
+
+// Phone list
+@use 'components/phone-list/phoneGrid';
+@use 'components/phone-list/phoneSearch';
+
+// Phone details
+@use 'pages/phoneDetails';
+@use 'components/phone-details/phoneSpecs';
+@use 'components/phone-details/storageSelector';
+@use 'components/phone-details/colorSelector';
+@use 'components/phone-details/similarPhones';
+
+// Cart
+@use 'pages/cartPage';
+@use 'components/cart/cartItem';
+@use 'components/cart/cartSummary';

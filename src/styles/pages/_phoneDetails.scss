@@ -1,0 +1,92 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.phone-details {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: $spacing-section;
+    @include details-content-box;
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    @include image-contain;
+    flex: none;
+    align-self: flex-start;
+    width: 260px;
+    height: 273px;
+
+    @media (min-width: $bp-tablet) {
+      width: 337px;
+      height: 416px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 510px;
+      height: 630px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+
+    @media (min-width: $bp-tablet) {
+      flex: none;
+      width: 362px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 380px;
+      gap: 64px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &__selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: $bp-desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__price {
+    font-size: $font-size-md;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__add-btn {
+    @include button-base;
+    @include button-primary;
+    width: 100%;
+  }
+}

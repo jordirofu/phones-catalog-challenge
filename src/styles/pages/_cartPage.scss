@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$header-height});
+
+  &__bar {
+    @include sticky-subheader;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+  }
+}

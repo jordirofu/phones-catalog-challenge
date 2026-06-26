@@ -1,0 +1,27 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.phone-search {
+  @include sticky-subheader;
+
+  padding-top: 24px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-lines;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    font-size: $font-size-md;
+    font-family: inherit;
+    outline: none;
+    background: transparent;
+  }
+
+  &__count {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+  }
+}

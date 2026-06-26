@@ -1,0 +1,37 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.color-selector {
+  @include selector-block;
+
+  &__label {
+    @include selector-label;
+  }
+
+  &__options {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__swatch {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px $color-selector-unselected;
+    cursor: pointer;
+
+    &:hover,
+    &--selected {
+      box-shadow: 0 0 0 1px $color-selector-selected;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-sm;
+    min-height: 1.25em;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-md;
+    }
+  }
+}
