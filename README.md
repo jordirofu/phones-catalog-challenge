@@ -1,4 +1,4 @@
-# Phone Catalog · Zara Challenge
+# Phone Catalog · Challenge
 
 Aplicación web de **catálogo de teléfonos móviles** desarrollada como prueba
 técnica de frontend. Permite **visualizar, buscar y gestionar** un catálogo de
