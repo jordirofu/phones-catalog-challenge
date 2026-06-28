@@ -10,7 +10,7 @@ export function useDragScroll() {
   const moved = useRef(false)
 
   const onMouseDown = (e) => {
-    e.preventDefault() 
+    e.preventDefault()
     setIsDragging(true)
     moved.current = false
     startX.current = e.pageX - ref.current.offsetLeft
