@@ -5,7 +5,6 @@ import { CartProvider } from '../../context/CartProvider'
 import { useCart } from '../../hooks/useCart'
 import CartIcon from './CartIcon'
 
-
 function AddButton({ phone }) {
   const { addItem } = useCart()
   return <button onClick={() => addItem(phone)}>add</button>
@@ -18,7 +17,7 @@ function renderCartIcon() {
         <CartIcon />
         <AddButton phone={{ id: 'x1', price: 999 }} />
       </CartProvider>
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 }
 
@@ -44,7 +43,7 @@ describe('CartIcon', () => {
 
     expect(screen.getByRole('link')).toHaveAttribute(
       'aria-label',
-      'View cart, 1 items'
+      'View cart, 1 items',
     )
   })
 })

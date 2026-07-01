@@ -37,7 +37,7 @@ function renderPage() {
           <Route path="/phones/:id" element={<PhoneDetailsPage />} />
         </Routes>
       </CartProvider>
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 }
 
@@ -51,7 +51,7 @@ describe('PhoneDetailsPage', () => {
 
     expect(screen.getByRole('status')).toHaveTextContent('Loading...')
     expect(
-      await screen.findByRole('heading', { name: 'iPhone 15' })
+      await screen.findByRole('heading', { name: 'iPhone 15' }),
     ).toBeInTheDocument()
   })
 

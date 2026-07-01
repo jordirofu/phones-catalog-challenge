@@ -1,17 +1,14 @@
 @use 'variables' as *;
 
 @mixin page-padding {
-  padding-left: $padding-mobile;
-  padding-right: $padding-mobile;
+  padding-inline: $padding-mobile;
 
   @media (min-width: $bp-tablet) {
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
+    padding-inline: $padding-tablet;
   }
 
   @media (min-width: $bp-desktop) {
-    padding-left: $padding-desktop;
-    padding-right: $padding-desktop;
+    padding-inline: $padding-desktop;
   }
 }
 
@@ -21,35 +18,26 @@
 }
 
 @mixin page-bleed {
-  margin-left: -$padding-mobile;
-  margin-right: -$padding-mobile;
+  margin-inline: -$padding-mobile;
 
   @media (min-width: $bp-tablet) {
-    margin-left: -$padding-tablet;
-    margin-right: -$padding-tablet;
+    margin-inline: -$padding-tablet;
   }
 
   @media (min-width: $bp-desktop) {
-    margin-left: -$padding-desktop;
-    margin-right: -$padding-desktop;
+    margin-inline: -$padding-desktop;
   }
 }
 
 @mixin content-inset {
-  padding-left: $padding-mobile;
-  padding-right: $padding-mobile;
+  padding-inline: $padding-mobile;
 
   @media (min-width: $bp-tablet) {
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
+    padding-inline: $padding-tablet;
   }
 
   @media (min-width: $bp-desktop) {
-    padding-left: max(
-      #{$padding-desktop},
-      calc((100% - #{$details-content-max-width}) / 2)
-    );
-    padding-right: max(
+    padding-inline: max(
       #{$padding-desktop},
       calc((100% - #{$details-content-max-width}) / 2)
     );
